@@ -8,7 +8,9 @@ import HomeButton from "@/components/HomeButton";
 export default function CreatePage() {
   // * Begin Activity 2a
   //TODO: Create a set of hooks for the title, description, and owner
-
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [owner, setOwner] = useState("");
   // * End Activity
 
   const [options, setOptions] = useState([""]);
@@ -57,6 +59,32 @@ export default function CreatePage() {
          * One way of displaying it is:
          * Title: [         ]
          */}
+        <label>Title:
+          <input
+            className={styles.textInput}
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </label>
+
+        <label>Description:
+          <input
+            className={styles.textInput}
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </label>
+
+        <label>Owner:
+          <input
+            className={styles.textInput}
+            type="text"
+            value={owner}
+            onChange={(e) => setOwner(e.target.value)}
+          />
+        </label>
 
         {/* ACTIVITY END */}
 
